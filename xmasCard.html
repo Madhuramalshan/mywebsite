@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+ <html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+
+                <title>Welcome to My Xmas Card</title>
+                <link rel="Website icon" type="png" href="https://drive.google.com/uc?export=view&id=1cMZr0h7610MxZIHM-p4w14QE46bGSsOd">
+        
+
+            
+
+                <style>
+                    
+
+                body {
+                    background: url("https://drive.google.com/uc?export=view&id=1zMwbQX5_csubQXg9Wf-08937btJiA3R0") no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    min-height:100vh;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-size-filter: grayScale(1);
+                    height: 100vh;
+                    margin: 0;
+                    overflow: hidden;
+                    padding: 2rem;
+                    min-height:100vh;
+                    overflow:hidden;
+
+                }
+            
+                            .navbar {
+                    overflow: hidden;
+                    background-color: #333;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    }
+
+                    .navbar a {
+                    float: left;
+                    display: block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    }
+
+                    .navbar a:hover {
+                    background: #ddd;
+                    color: black;
+                    }
+
+                    .main {
+                    padding: 16px;
+                    margin-top: 30px;
+                    height: 1500px; /* Used in this example to enable scrolling */
+                    }
+
+                    @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+                    
+                    .merry-christmas img {
+                    width: 100px;
+                    }
+                    
+                    .card {
+                    -webkit-perspective: 1500px;
+                    -moz-perspective: 1500px;
+                    perspective: 1500px;
+                    position: absolute;
+                    left: calc(50% - 125px);
+                    top: calc(50% - 175px);
+                    -webkit-transition-property: -webkit-transform;
+                    -moz-transition-property: -moz-transform;
+                    transition-property: transform;
+                    -webkit-transition-duration: 1s;
+                    -moz-transition-duration: 1s;
+                    transition-duration: 1s;
+                    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    -webkit-transition-delay: initial;
+                    -moz-transition-delay: initial;
+                    transition-delay: initial;
+                    -webkit-transform: rotate(-10deg) translate(0, 0);
+                    -moz-transform: rotate(-10deg) translate(0, 0);
+                    -ms-transform: rotate(-10deg) translate(0, 0);
+                    -o-transform: rotate(-10deg) translate(0, 0);
+                    transform: rotate(-10deg) translate(0, 0);
+                    -webkit-animation: cardIn 1s alternate cubic-bezier(0.87, -0.41, 0.19, 1.44);
+                    -moz-animation: cardIn 1s alternate cubic-bezier(0.87, -0.41, 0.19, 1.44);
+                    animation: cardIn 1s alternate cubic-bezier(0.87, -0.41, 0.19, 1.44);
+                    }
+                    @media (max-width: 767px) {
+                    .card {
+                        left: calc(50% - 115px);
+                        top: calc(50% - 164.5px);
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .card {
+                        left: calc(50% - 75px);
+                        top: calc(50% - 107px);
+                    }
+                    }
+                    .card:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0 0 100px #000;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    }
+                    .card.is-opened {
+                    -webkit-transform: rotate(0deg) translate(125px, 0);
+                    -moz-transform: rotate(0deg) translate(125px, 0);
+                    -ms-transform: rotate(0deg) translate(125px, 0);
+                    -o-transform: rotate(0deg) translate(125px, 0);
+                    transform: rotate(0deg) translate(125px, 0);
+                    }
+                    @media (max-width: 767px) {
+                    .card.is-opened {
+                        -webkit-transform: rotate(0deg) translate(115px, 0);
+                        -moz-transform: rotate(0deg) translate(115px, 0);
+                        -ms-transform: rotate(0deg) translate(115px, 0);
+                        -o-transform: rotate(0deg) translate(115px, 0);
+                        transform: rotate(0deg) translate(115px, 0);
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .card.is-opened {
+                        -webkit-transform: rotate(0deg) translate(75px, 0);
+                        -moz-transform: rotate(0deg) translate(75px, 0);
+                        -ms-transform: rotate(0deg) translate(75px, 0);
+                        -o-transform: rotate(0deg) translate(75px, 0);
+                        transform: rotate(0deg) translate(75px, 0);
+                    }
+                    }
+                    .card.is-opened .cart-page-front {
+                    -webkit-transform: rotateY(-180deg);
+                    -moz-transform: rotateY(-180deg);
+                    -ms-transform: rotateY(-180deg);
+                    -o-transform: rotateY(-180deg);
+                    transform: rotateY(-180deg);
+                    }
+                    
+                    @keyframes cardIn {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: rotate(-10deg) translate(0, -100%);
+                        -moz-transform: rotate(-10deg) translate(0, -100%);
+                        -ms-transform: rotate(-10deg) translate(0, -100%);
+                        -o-transform: rotate(-10deg) translate(0, -100%);
+                        transform: rotate(-10deg) translate(0, -100%);
+                    }
+                    25% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: rotate(-10deg) translate(0, 0);
+                        -moz-transform: rotate(-10deg) translate(0, 0);
+                        -ms-transform: rotate(-10deg) translate(0, 0);
+                        -o-transform: rotate(-10deg) translate(0, 0);
+                        transform: rotate(-10deg) translate(0, 0);
+                    }
+                    }
+                    .card,
+                    .card-page {
+                    width: 350px;
+                    height: 450px;
+                    }
+                    @media (max-width: 767px) {
+                    .card,
+                    .card-page {
+                        width: 230px;
+                        height: 329px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .card,
+                    .card-page {
+                        width: 150px;
+                        height: 214px;
+                    }
+                    }
+                    
+                    .card-page {
+                    -webkit-transition: -webkit-transform 1s ease-in-out;
+                    -moz-transition: -moz-transform 1s ease-in-out;
+                    transition: transform 1s ease-in-out;
+                    cursor: pointer;
+                    position: absolute;
+                    outline: 1px solid transparent;
+                    }
+                    
+                    .cart-page-front {
+                    -webkit-transform-origin: 0 50% 0;
+                    -moz-transform-origin: 0 50% 0;
+                    -ms-transform-origin: 0 50% 0;
+                    -o-transform-origin: 0 50% 0;
+                    transform-origin: 0 50% 0;
+                    -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
+                    -ms-transform-style: preserve-3d;
+                    -o-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    -webkit-transform: rotateY(-20deg);
+                    -moz-transform: rotateY(-20deg);
+                    -ms-transform: rotateY(-20deg);
+                    -o-transform: rotateY(-20deg);
+                    transform: rotateY(-20deg);
+                    z-index: 2;
+                    }
+                    
+                    .cart-page-outside,
+                    .cart-page-inside {
+                    position: absolute;
+                    -webkit-backface-visibility: hidden;
+                    }
+                    
+                    .cart-page-outside {
+                    border: 10px solid #f7f7f7;
+                    background: #e99bbf
+                        url("https://drive.google.com/uc?export=view&id=1Dzp30gk9oP-iMXoruoElBtFAsegcWoM-")
+                        no-repeat center;
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                    }
+                    @media (max-width: 767px) {
+                    .cart-page-outside {
+                        border: 5px solid #fbfbfb;
+                    }
+                    }
+                    
+                    .cart-page-inside,
+                    .cart-page-bottom {
+                    background-color: #e0b2b2f5;
+                    background-image: url("https://www.dropbox.com/s/8hw7guch8d151kg/pattern.png?raw=1");
+                    border: 10px solid #f9f9f9;
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: box;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -moz-box-pack: center;
+                    box-pack: center;
+                    -webkit-justify-content: center;
+                    -moz-justify-content: center;
+                    -ms-justify-content: center;
+                    -o-justify-content: center;
+                    justify-content: center;
+                    -ms-flex-pack: center;
+                    -webkit-box-align: center;
+                    -moz-box-align: center;
+                    box-align: center;
+                    -webkit-align-items: center;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    -o-align-items: center;
+                    align-items: center;
+                    -ms-flex-align: center;
+                    text-align: center;
+                    }
+                    @media (max-width: 767px) {
+                    .cart-page-inside,
+                    .cart-page-bottom {
+                        border: 10px solid #f9f9f9;
+                    }
+                    }
+                    
+                    .cart-page-inside {
+                    -webkit-transform: rotateY(-180deg);
+                    -moz-transform: rotateY(-180deg);
+                    -ms-transform: rotateY(-180deg);
+                    -o-transform: rotateY(-180deg);
+                    transform: rotateY(-180deg);
+                    border-right: none !important;
+                    background-position: 0px 80px;
+                    }
+                    @media (max-width: 767px) {
+                    .cart-page-inside {
+                        background-position: 0px 30px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .cart-page-inside {
+                        background-position: 0px 30px;
+                    }
+                    }
+                    
+                    .cart-page-bottom {
+                    z-index: 1;
+                    border-left: none !important;
+                    background-position: -22px 80px;
+                    }
+                    @media (max-width: 767px) {
+                    .cart-page-bottom {
+                        background-position: 85px 30px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .cart-page-bottom {
+                        background-position: 0px 30px;
+                    }
+                    }
+                    .cart-page-bottom .merry-christmas img {
+                    width: 200px;
+                    height: auto;
+                    }
+                    @media (max-width: 767px) {
+                    .cart-page-bottom .merry-christmas img {
+                        width: 150px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .cart-page-bottom .merry-christmas img {
+                        width: 150px;
+                    }
+                    }
+                    
+                    p {
+                    font-family: "Architects Daughter", cursive;
+                    font-size: 30px;
+                    line-height: 1.2em;
+                    padding: 15px;
+                    color: #da1212;
+                    }
+                    @media (max-width: 767px) {
+                    p {
+                        font-size: 14px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    p {
+                        font-size: 14px;
+                    }
+                    }
+                    
+                    
+                    
+                    @media (max-width: 767px) {
+                    .click-icon svg {
+                        width: 72px;
+                        height: 72px;
+                    }
+                    }
+                    @media (max-width: 479px) {
+                    .click-icon svg {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    }
+                    .click-icon.is-hidden {
+                    opacity: 0;
+                    }
+                    
+                    @keyframes iconAnimation {
+                    0% {
+                        -webkit-transform: translate(-50%, 0);
+                        -moz-transform: translate(-50%, 0);
+                        -ms-transform: translate(-50%, 0);
+                        -o-transform: translate(-50%, 0);
+                        transform: translate(-50%, 0);
+                    }
+                    100% {
+                        -webkit-transform: translate(-50%, 10px);
+                        -moz-transform: translate(-50%, 10px);
+                        -ms-transform: translate(-50%, 10px);
+                        -o-transform: translate(-50%, 10px);
+                        transform: translate(-50%, 10px);
+                    }
+                    }
+
+                </style>
+            </head>
+
+            <body>
+                <div class="navbar">
+                    <!-- Header -->
+                    <div class="w3-container w3-dark-grey" style="height:100px ;">
+                        <h1 class="w3-left w3-wide w3-xlarge w3-padding-top-24" style="font-weight:bold ;">Welcome, Udayasiri S.M.M</h1>
+                    </div>
+            
+                    <a href="index.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">HOME</i></a>
+                    <a href="skill.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">QUALFICATIONS</a>
+                    <!--<a href="education.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">EDUCATION</a>-->
+                    <a href="gallary.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">GALLARY</a>
+                    <a href="contact.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">CONTACT ME</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">CHRISTMAS CARD</a>
+            
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="card">
+                    <div class="card-page cart-page-front">
+                    <div class="card-page cart-page-outside"></div>
+
+                    <div class="card-page cart-page-inside">
+                        <span class="merry-christmas">
+                        <img src="https://drive.google.com/uc?export=view&id=1lj91gmkNUGML1XcSKA-dWrDG8alB5YXu" alt="santa" />
+                        </span>
+                    </div>
+
+                    </div>
+
+                    <div>
+                        <span class="merry-christmas">
+        
+                        </span>
+                        <p class="w3-justify">
+                        May the peace and blessings of Christmas be yours; And may the coming year be filled with happiness.
+                        </p>
+                    </div>
+
+                <script>
+                    const elemCard = document.querySelector("div.card");
+                    const elemClickIcon = document.querySelector("span.click-icon");
+                    
+                    elemCard.addEventListener("click", function () {
+                    elemCard.classList.toggle("is-opened");
+                    elemClickIcon.classList.toggle("is-hidden");
+                    });
+                    
+                </script>
+
+        <div class="w3-medium w3-white w3-border-top w3-margin-top">
+            <p class="w3-center w3-small" >&copy; 2022 | All rights reserved by Udayasiri S.M.M</p>
+        </div>
+
+
+        <script>
+            var snow_fall_rate = 5 //decrease for faster fall speed
+            function snow() {  
+            var b = document.createElement('div')
+            var size = (Math.random()*10) + 5
+            b.className = 'flake'
+            b.style.width = size + 'px'
+            b.style.height = size + 'px'
+            b.style.position = 'fixed'
+            b.style.zIndex = '9999'
+            b.style.left = Math.random()*window.innerWidth + 'px'
+            b.style.top = '-20px'
+            b.style.borderRadius = '50%'
+            b.style.background = 'white' 
+            b.style.opacity = '.5' 
+            b.style.filter = Math.random() < .5 ? 'blur(3px)' : 'blur(1px)'
+            b.style.transition = Math.random < .5 ? snow_fall_rate*.75 + 's' : snow_fall_rate + 's'
+            b.style.transitionTimingFunction = 'ease-in'
+            document.body.appendChild(b)
+            
+            setTimeout(function(){
+                var flakes = document.querySelectorAll('.flake')
+                var flake = flakes[flakes.length - 1]  
+                var flake_loc = flake.getBoundingClientRect()
+                flake.style.top = '105%'
+                flake.style.left = Math.random() < .5 ? flake_loc.left - 150 + 'px' : flake_loc.left + 150 + 'px'
+            },10)  
+            
+            var flakes = document.getElementsByClassName('flake')
+            for(var i=0;i<flakes.length;i++){
+                if(flakes[i].getBoundingClientRect().top > window.innerHeight) {
+                flakes[i].remove()
+                }      
+            }
+            setTimeout(function(){ snow() },200)
+            }
+            snow()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Welcome to My Website</title>
+        <link rel="Website icon" type="png" href="https://drive.google.com/uc?export=view&id=1cMZr0h7610MxZIHM-p4w14QE46bGSsOd">
+        
+  <style>
+    /* Add some style to the calculator */
+    .calculator {
+      width: 300px;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+    .calculator button {
+      background-color: #eee;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+      width: 20%;
+    }
+    .calculator button:hover {
+      background-color: #ddd;
+    }
+    .calculator button.operator {
+      background-color: #ffa500;
+      color: white;
+    }
+    .calculator button.equal {
+      background-color: #4caf50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Create the calculator -->
+  <div class="calculator">
+    <input type="text" id="display">
+    <br>
+    <button value="7">7</button>
+    <button value="8">8</button>
+    <button value="9">9</button>
+    <button value="+" class="operator">+</button>
+    <br>
+    <button value="4">4</button>
+    <button value="5">5</button>
+    <button value="6">6</button>
+    <button value="-" class="operator">-</button>
+    <br>
+    <button value="1">1</button>
+    <button value="2">2</button>
+    <button value="3">3</button>
+    <button value="*" class="operator">*</button>
+    <br>
+    <button value="C" class="clear">C</button>
+    <button value="0">0</button>
+    <button value="=" class="equal">=</button>
+    <button value="/" class="operator">/</button>
+  </div>
+  
+  <script>
+    // Add event listeners to the buttons
+    var buttons = document.querySelectorAll('button');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(event) {
+        var buttonValue = event.target.value;
+        var display = document.querySelector('#display');
+        var currentValue = display.value;
+        
+        // Handle clear button
+        if (buttonValue === 'C') {
+          display.value = '';
+          return;
+        }
+        
+        // Handle equal button
+        if (buttonValue === '=') {
+          display.value = eval(currentValue);
+          return;
+        }
+        
+        // Append value to the display
+        display.value += buttonValue;
+      });
+    }
+  </script>
+</body>
+</html>

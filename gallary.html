@@ -1,0 +1,343 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
+    <title>GALLARY</title>
+    <link rel="Website icon" type="png" href="https://drive.google.com/uc?export=view&id=1cMZr0h7610MxZIHM-p4w14QE46bGSsOd">
+        
+
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+
+    <style>
+
+        body {
+            background: url("https://drive.google.com/uc?export=view&id=1zMwbQX5_csubQXg9Wf-08937btJiA3R0") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            padding: 2rem;
+        }
+    
+        .container {
+            width: 100%;
+            height: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .links-container a {
+            width: 80%;
+            box-shadow: 2px 2px 0 #444;
+        }
+    
+        .name {
+            background-color: rgba(121, 85, 72, 0.4);
+            color: #ccc;
+            text-shadow: 4px 4px 0 #444;
+            box-shadow: 2px 2px 0 #444;
+            font-size: 18px;
+        }
+    
+        .subtext {
+            font-size: 16px;
+            background-color: rgba(121, 85, 72, 0.4);
+            color: #ccc;
+            text-shadow: 1px 1px 0 #444;
+            box-shadow: 2px 2px 0 #444;
+        }
+    
+        svg {
+            stroke: #6d4d41;
+            transform: scale(1.5);
+        }
+    
+        .portrait {
+            border-color: #553c33 !important;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            max-height: 500px;
+        }
+    
+        span {
+            display: block;
+        }
+    
+        .skew-1 {
+            -ms-transform: skewX(20deg); /* IE 9 */
+            -webkit-transform: skewX(20deg); /* Safari */
+            transform: skewX(20deg);
+        }
+        .skew-text-1 {
+            -ms-transform: skewX(-20deg); /* IE 9 */
+            -webkit-transform: skewX(-20deg); /* Safari */
+            transform: skewX(-20deg);
+        }
+    
+        .skew-2 {
+            -ms-transform: skewX(-20deg); /* IE 9 */
+            -webkit-transform: skewX-(20deg); /* Safari */
+            transform: skewX(-20deg);
+        }
+        .skew-text-2 {
+            -ms-transform: skewX(20deg); /* IE 9 */
+            -webkit-transform: skewX(20deg); /* Safari */
+            transform: skewX(20deg);
+        }
+    
+        @media (min-width: 768px) {
+            .link {
+            width: 100%;
+            }
+        }
+        @media (min-width: 576px) {
+            .container {
+            max-width: 540px;
+            }
+    
+            .name {
+            font-size: 36px;
+            }
+    
+        }
+
+                    .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
+
+            .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+            .navbar a:hover {
+            background: #ddd;
+            color: black;
+            }
+
+            .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px; /* Used in this example to enable scrolling */
+            }
+
+            
+            div.gallery {
+              border: 1px solid #ccc;
+            }
+
+            div.gallery:hover {
+              border: 1px solid #777;
+            }
+
+            div.gallery img {
+              width: 100%;
+              height: auto;
+            }
+
+            div.desc {
+              padding: 15px;
+              text-align: center;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+
+            .responsive {
+              padding: 0 6px;
+              float: left;
+              width: 24.99999%;
+            }
+
+            @media only screen and (max-width: 700px) {
+              .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+              }
+            }
+
+            @media only screen and (max-width: 500px) {
+              .responsive {
+                width: 100%;
+              }
+            }
+
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+    </style>
+
+  </head>
+
+  <body>
+      
+
+    <!-- Manu bar -->
+    <div class="navbar">
+        <!-- Header -->
+        <div class="w3-container w3-dark-grey" style="height:100px ;">
+            <h1 class="w3-left w3-wide w3-xlarge w3-padding-top-24" style="font-weight:bold ;">Welcome, Udayasiri S.M.M</h1>
+            
+        </div>
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">HOME</i></a>
+        <a href="skill.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">QUALFICATIONS</a>
+        <!--<a href="education.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">EDUCATION</a>-->
+        <a href="#" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">GALLARY</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">CONTACT ME</a>
+        <a href="xmasCard.html" class="w3-bar-item w3-button w3-hover-orange w3-hover-text-white">CHRISTMAS CARD</a>
+    
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+      
+          
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://drive.google.com/uc?export=view&id=1eAwy0a39WVaUyXv-G3j6SatHAHjpxa47">
+            <img src="https://drive.google.com/uc?export=view&id=1eAwy0a39WVaUyXv-G3j6SatHAHjpxa47" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">With ME </div>
+        </div>
+      </div>
+
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://drive.google.com/uc?export=view&id=1fIUbw4jI_J7AFMIfZdHvPa75yzpMXRI5">
+            <img src="https://drive.google.com/uc?export=view&id=1fIUbw4jI_J7AFMIfZdHvPa75yzpMXRI5" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Arduino Bluetooth car</div>
+        </div>
+      </div>
+
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://drive.google.com/uc?export=view&id=1jzsFO4Vt3BQlmWfcdeEhsJtTmNOZbovj">
+            <img src="https://drive.google.com/uc?export=view&id=1jzsFO4Vt3BQlmWfcdeEhsJtTmNOZbovj" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">IOT device with Solonoid controler</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://drive.google.com/uc?export=view&id=1owQ6LHEYH6s9vglxwPHoscLeSFnTY230">
+            <img src="https://drive.google.com/uc?export=view&id=1owQ6LHEYH6s9vglxwPHoscLeSFnTY230" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">My Drawing PCB</div>
+        </div>
+      </div>
+
+
+      <!-- <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://drive.google.com/uc?export=view&id=1cMZr0h7610MxZIHM-p4w14QE46bGSsOd">
+            <img src="https://drive.google.com/uc?export=view&id=1cMZr0h7610MxZIHM-p4w14QE46bGSsOd" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>   -->
+
+      <div class="clearfix"></div>
+
+    <br><br><br>
+    <div class="w3-center">
+
+        <a href="https://www.facebook.com/madhura.malshan/" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;color:rgb(0, 135, 245)"></i></a>
+        <a href="https://wa.me/+94778904216" target="_blank"><i class="fa fa-whatsapp" style="font-size:48px;color:rgb(20, 221, 20)"></i></a>
+        <a href="https://github.com/Madhuramalshan" target="_blank"><i class="fa fa-github-square" style="font-size:48px;color:rgb(72, 11, 240)"></i></a>
+        <a href="https://t.me/Madhuramalshan" target="_blank"><i class="fa fa-telegram" style="font-size:48px;color:rgb(11, 193, 248)"></i></a>
+        <a href="https://www.youtube.com/channel/UCl98YBtayWbeOENy9TUSJyA" target="_blank"><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
+        <a href="https://www.picture.lk/madhuramalshan7.6597/activity" target="_blank"><i class="fa fa-camera" style="font-size:38px;color:rgb(12, 92, 241)"></i></a>
+        <a href="https://www.linkedin.com/in/madhura-malshan-22260423a/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(0, 132, 255)"></i></a>
+        <a href="https://www.tiktok.com/@smmucreation?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa fa-tumblr-square" style="font-size:48px;color:rgb(43, 4, 66)"></i></a>
+            
+    </div>
+
+
+
+    <div class="w3-container w3-light-gray w3-border-top w3-margin-top">
+        <p class="w3-center w3-medium" >&copy; 2022 | All rights reserved by Udayasiri S.M.M</p>
+    </div>
+
+    <script>
+        var snow_fall_rate = 5 //decrease for faster fall speed
+        function snow() {  
+        var b = document.createElement('div')
+        var size = (Math.random()*10) + 5
+        b.className = 'flake'
+        b.style.width = size + 'px'
+        b.style.height = size + 'px'
+        b.style.position = 'fixed'
+        b.style.zIndex = '9999'
+        b.style.left = Math.random()*window.innerWidth + 'px'
+        b.style.top = '-20px'
+        b.style.borderRadius = '50%'
+        b.style.background = 'white' 
+        b.style.opacity = '.5' 
+        b.style.filter = Math.random() < .5 ? 'blur(3px)' : 'blur(1px)'
+        b.style.transition = Math.random < .5 ? snow_fall_rate*.75 + 's' : snow_fall_rate + 's'
+        b.style.transitionTimingFunction = 'ease-in'
+        document.body.appendChild(b)
+        
+        setTimeout(function(){
+            var flakes = document.querySelectorAll('.flake')
+            var flake = flakes[flakes.length - 1]  
+            var flake_loc = flake.getBoundingClientRect()
+            flake.style.top = '105%'
+            flake.style.left = Math.random() < .5 ? flake_loc.left - 150 + 'px' : flake_loc.left + 150 + 'px'
+        },10)  
+        
+        var flakes = document.getElementsByClassName('flake')
+        for(var i=0;i<flakes.length;i++){
+            if(flakes[i].getBoundingClientRect().top > window.innerHeight) {
+            flakes[i].remove()
+            }      
+        }
+        setTimeout(function(){ snow() },200)
+        }
+        snow()
+    </script>
+
+  </body>  
+</html>
